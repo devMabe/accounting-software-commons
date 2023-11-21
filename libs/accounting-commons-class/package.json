@@ -1,6 +1,6 @@
 {
   "name": "@mabenuz_22/accounting-commons-class",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Contiene las clases comunnes del proyecto",
   "main": "index.js",
   "scripts": {
