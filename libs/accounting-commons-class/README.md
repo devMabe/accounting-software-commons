@@ -3,6 +3,7 @@
 Nest Library to learn how to create and publish libraries in NPM.
 ## Instructions
 ### Install
-```npm install accounting-commons-class```
+```npm install @mabenuz_22/accounting-commons-class```
 ### Use library
-... Define instructions to consume library
+
+import the class necesary for ms

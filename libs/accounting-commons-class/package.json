@@ -1,6 +1,6 @@
 {
   "name": "@mabenuz_22/accounting-commons-class",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Contiene las clases comunnes del proyecto",
   "main": "index.js",
   "scripts": {
@@ -11,5 +11,8 @@
     "email": "danielbelnuz18@gmail,com",
     "name": "Mateo Beltran"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "sequelize-typescript": "^2.1.5"
+  }
 }
