@@ -7,7 +7,9 @@
   "license": "MIT",
   "scripts": {
     "build": "nest build",
-    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
+    "publish:lib": "cd dist/libs/accounting-commons-class && npm publish --access public",
+    "build:lib": "rimraf dist && tsc -p ./libs/accounting-commons-class/tsconfig.lib.json && sh copy-libraries-files.sh",
+    "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\" \"libs/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",
@@ -54,14 +56,14 @@
     "dist",
     "src",
     "index.js"
-  ],  
+  ],
   "jest": {
     "moduleFileExtensions": [
       "js",
       "json",
       "ts"
     ],
-    "rootDir": "src",
+    "rootDir": ".",
     "testRegex": ".*\\.spec\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
@@ -69,8 +71,15 @@
     "collectCoverageFrom": [
       "**/*.(t|j)s"
     ],
-    "coverageDirectory": "../coverage",
-    "testEnvironment": "node"
+    "coverageDirectory": "./coverage",
+    "testEnvironment": "node",
+    "roots": [
+      "<rootDir>/src/",
+      "<rootDir>/libs/"
+    ],
+    "moduleNameMapper": {
+      "^@app/accounting-commons-class(|/.*)$": "<rootDir>/libs/accounting-commons-class/src/$1"
+    }
   },
   "main": ".eslintrc.js",
   "directories": {

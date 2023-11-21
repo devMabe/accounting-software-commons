@@ -3,6 +3,18 @@
   "collection": "@nestjs/schematics",
   "sourceRoot": "src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true
+  },
+  "projects": {
+    "accounting-commons-class": {
+      "type": "library",
+      "root": "libs/accounting-commons-class",
+      "entryFile": "index",
+      "sourceRoot": "libs/accounting-commons-class/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/accounting-commons-class/tsconfig.lib.json"
+      }
+    }
   }
 }

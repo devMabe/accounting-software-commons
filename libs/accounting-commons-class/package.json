@@ -1,0 +1,15 @@
+{
+  "name": "@mabenuz_22/accounting-commons-class",
+  "version": "1.0.0",
+  "description": "Contiene las clases comunnes del proyecto",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": {
+    "email": "danielbelnuz18@gmail,com",
+    "name": "Mateo Beltran"
+  },
+  "license": "MIT"
+}
